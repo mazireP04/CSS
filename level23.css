@@ -1,8 +1,0 @@
-/* Level 23 -  flex-direction and align-content*/
-
-#pond {
-    display: flex;
-    flex-wrap: wrap;
-  flex-direction: column-reverse;
-  align-content: center;
-  }

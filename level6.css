@@ -1,7 +1,0 @@
-/* Level 6 - align-items and justify-content*/
-
-#pond {
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  }
