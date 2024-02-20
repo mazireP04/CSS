@@ -1,0 +1,403 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ENTIRE PAGE */
+.main{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column nowrap;
+}
+
+
+/* HEADER */
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+header h1{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+}
+
+
+/* HORIZONTAL NAVBAR */
+nav{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255, 228, 213);
+  height:auto;
+}
+
+
+/* MENU */
+.menu > ul{
+  display: none;
+  list-style-type: none;
+  padding: 0.3%;
+  background-color: rgb(255, 228, 213);
+  height: 80%;
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left:0.5%;
+}
+
+.menu{
+  margin-left: 1vw;
+}
+
+#menu{
+  cursor:pointer;
+  position: relative;
+  font-weight: bold;
+}
+
+.dropdown > li a{
+  text-decoration: none;
+  color: black;
+}
+
+.menu:hover > ul{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* MAIN PHOTO GRID */
+.content{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 5vh;
+  justify-content: center;
+  margin: 3vh auto;
+}
+
+.flex-item{
+  height: 96vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: auto;
+  border: 1px solid rgb(255, 228, 213);
+  align-items: flex-start;
+  padding: 8px;
+}
+
+.flex-item img{
+  width: 100%;
+  height: 75%;
+}
+
+.img-name{
+  font-size: large;
+}
+.flex-item p{
+  text-align: center;
+}
+
+
+
+/* PAGINATION */
+.pagination{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(166, 166, 166);
+}
+
+.pagination > ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 5vw;
+}
+
+.pagination a{
+  margin: 4vw;
+  padding: 2vh;
+  text-decoration: none;
+  color: black;
+}
+
+.pagination li:hover > a{
+  background-color: rgb(253, 241, 234);
+}
+
+.pagination .active{
+  background-color: rgb(255, 228, 213);
+}
+
+
+/* ABOUT */
+.about{
+  
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 3vh;
+  margin: 8vh 0.5vw;
+  padding: 1vh;
+}
+
+.about > p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+.about img{
+  margin: 0.5vh;
+  border-radius: 1vw;
+}
+
+.about p{
+  text-align: center;
+}
+
+.about p:first-child{
+  font-weight: bold;
+}
+
+
+
+/* FOOTER */
+footer{
+  display: flex;
+  flex-flow: column;
+  margin: 6vw;
+  border-top: 1px solid rgb(166, 166, 166);
+  justify-content: center;
+  gap: 2vh;
+  padding-top: 4.5vh;
+}
+
+footer > div{
+  padding: 0.7vw;
+  width: 100%;
+}
+
+footer h3, p{
+  text-align: center;
+}
+
+.flexbox{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.5px solid rgb(166, 166, 166);
+  align-items: center;
+  gap: 2.5%;
+  padding: 0.5vh;
+}
+
+.flexbox:hover{
+  background-color: rgb(205, 205, 205);
+  cursor: pointer; 
+}
+
+.second .flexbox:last-child{
+  border-bottom: none;
+}
+
+.left p{
+  text-align: left;
+}
+
+footer img{
+  width: 20%;
+  height: 20%;
+  padding: 1%;
+}
+
+.left::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.tags{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25cm;
+}
+
+.tags span{
+  background-color: rgb(165, 165, 165);
+  color: white;
+  padding: 0.08cm;
+  font-size: small;
+  text-decoration: none;
+}
+
+.tags span:first-child{
+  background-color: black;
+}
+
+
+
+
+/* media queries */
+@media (min-width: 600px) {
+  
+  *{
+    font-size: small;
+  }
+
+  /* HEADER */
+  header h1{
+    font-size: 4.5vw;
+  }
+  
+
+  /* HORIZONTAL NAVBAR */
+  nav{
+    height:7vh;
+  }
+  
+  /* MENU */
+  .menu > ul{
+    height: 80%;
+    width: 15%;
+    padding: 1%;
+  }
+  
+  #menu{
+    padding: 0.5%;
+  }
+  
+  .menu:hover > ul{
+    align-items: center;
+  }
+  
+
+  
+  /* MAIN PHOTO GRID */
+  .content{
+    flex-flow: row wrap;
+    gap: 2.5vw;
+    column-gap: 1vw;
+    margin: 6vh auto;
+  }
+  
+  .flex-item{
+    height: 68vh;
+    width: 22vw;
+    padding: 5px;
+  }
+  
+  .flex-item img{
+    height: 60%;
+    margin: auto;
+  }
+
+  .pagination > ul{ 
+    padding: 3vw;
+  }
+  
+  .pagination a{
+    margin: 3vw;
+    padding: 2vw;
+  }
+  
+  
+  /* FOOTER */
+  footer{
+    flex-flow: row;
+    padding-top: 5.5vh;
+  }
+  
+  footer > div{
+    padding: 0.5vw;
+    width: calc(100% / 3);
+  }
+
+  footer img{
+    width: 40%;
+    height: 40%;
+  }
+
+}
+
+
+
+@media (min-width: 768px) {
+
+
+  *{
+    font-size: medium;
+  }
+
+  /* MENU */
+  .menu > ul{
+    width: 10%;
+    padding: 2%;
+  }
+  
+  .menu:hover > ul{
+    align-items: flex-start;
+  }
+  
+  
+  /* MAIN PHOTO GRID */
+  .content{
+    gap: 3vh;
+    margin: 6vh 0;
+  }
+  
+
+  .flex-item{
+    height: 79vh;
+    width: 20vw;
+    margin: 2vh 0;
+  }
+  
+  .flex-item img{
+    height: 68%;
+  }
+  
+  /* PAGINATION */
+  .pagination a{
+    margin: 1.7vw;
+    padding: 1vw;
+  }
+
+  
+  /* ABOUT */
+  .about{
+    margin: 10vh 20vw;
+  }
+  
+
+  /* FOOTER */
+  footer{
+    margin: 6vw;
+    gap: 2vh;
+  }
+  
+  footer img{
+    width: 20%;
+    height: 20%;
+  }
+
+}
+
+

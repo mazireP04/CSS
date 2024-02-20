@@ -1,0 +1,178 @@
+
+*{
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.text{
+    font-size: medium;
+}
+
+/* ICONS */
+i{
+    margin-right: 0.3cm;
+}
+
+/* ENTIRE PAGE */
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 245, 236);
+}
+
+/* CARD GRID */
+.grid-container{
+    height: 88%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: "col";
+    gap: 2vh;
+}
+
+/* FIRST ROW OF LEFT CARD */
+.row1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 50vh;
+    border-bottom:  0.5px solid rgb(124, 124, 124);
+    position: relative;
+}
+
+.row1 img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+}
+
+
+.row1 p{
+    padding-left: 2vh;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+}
+
+/* ALL CARDS */
+[class*="card-item"]{
+    border: 0.5px solid black;
+    margin: 1vw;
+    box-shadow: 9px 9px ; 
+    background-color: #fff;
+}
+
+/* PROGRESS BARS */
+.bar{
+    background-color: rgb(200, 198, 198);
+    width: 85%;
+    height: 7px;
+    position: relative;
+}
+
+.inner-bar{
+    height:inherit; 
+    background-color: aquamarine; 
+    position:absolute; 
+    top:0; 
+}
+
+/* ROWS WITHIN THE CARDS */
+.row{
+    padding: 3vh;
+    background-color: white;
+}
+
+.row > p{
+    margin-left: auto;
+}
+
+.date{
+    color:rgb(107, 217, 180);
+}
+
+/* RIGHT COLUMN CARDS */
+[class*="right"] .row{
+    border-bottom: 0.5px solid rgb(187, 187, 187);
+}
+
+[class*="right"] .row:first-child, .row:last-child{
+    border-bottom: none;
+}
+
+/* FOOTER */
+footer{
+    height: 22%;
+    width: 100%;
+    background-color: aquamarine;
+    text-align: center;
+    padding: 2vh;
+    margin-top: 9vh;
+}
+
+footer{
+    height: 15vh;;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* media queries */
+
+@media (min-width: 600px) {
+
+    .row1{
+        height: 33vh;
+    }
+
+    /* CARD GRID */
+    .grid-container{
+        grid-template-areas: "col1 row1" "col2 ro2";
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    [class*="left"]{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-right: 0.7vh;
+    }
+
+    [class*="right"]{
+        margin-left: 0;
+    }
+
+    /* FOOTER */
+    footer{
+        height: 18vh;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+
+    .row1{
+        height: 44vh;
+    }
+
+    /* CARD GRID */
+    .grid-container{
+        gap: 1vh;
+    }
+
+    [class*="left"]{
+        margin-right: 1vw;
+        width: 27vw;
+    }
+
+    [class*="right"]{
+        width: 60vw;
+    }
+
+}
+
